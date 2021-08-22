@@ -1,4 +1,4 @@
-# Why do I even want to have frame comp on?
+# Why do I even want to have frame expansion compensation on?
 Quite simple - this is the same part, printed with the same settings. Both of these were printed from a cold start. The only difference is that while the right one was a solo part with a first layer time of ~1m45s, the left one was a part of a 7 hour full(ish) plate with a first layer time of more than 22 minutes.
 
 ![20210816_195655](https://user-images.githubusercontent.com/61467766/130360417-a3c08e91-1d5f-4a67-bde0-77ecef6e3ce1.jpg)

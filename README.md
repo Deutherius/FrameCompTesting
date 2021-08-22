@@ -5,8 +5,8 @@ Quite simple - this is the same part, printed with the same settings. Both of th
 
 Frame heats up between first and second layer, expands, and Z changes by more than 0.1 mm, resulting in a second layer that is too far from the first. So I ran the measurement scripts, figured out that my endstop was faulty, changed it, ran the measurement scripts a second time, and figured out that my frame compensation coefficient is 0.0298 mm/K. But there is still a small problem (well, multiple)...
 
-# A few tests with frame expansion compensation
-Ever since building my V2 I've been fighting an inconsistent Z offset - first print of the day (cold printer start - heat up, soak a bit, QGL, 5x5 bed mesh) has a perfect Z offset. Every other print after that is too high with the same Z offset. Makes sense, the printer expands as it heats up - this is what the frame expansion compensation tries to counteract. However, as I understand it, frame comp works by taking a reference temp at the time of homing and works from there - if I re-home when the printer is hot (and at thermal equilibrium), frame comp basically does nothing. 
+# A bit of info
+Ever since building my V2 (300 mm spec) I've been fighting an inconsistent Z offset - first print of the day (cold printer start - heat up, soak a bit, QGL, 5x5 bed mesh) has a perfect Z offset. Every other print after that is too high with the same Z offset. Makes sense, the printer expands as it heats up - this is what the frame expansion compensation tries to counteract. However, as I understand it, frame comp works by taking a reference temp at the time of homing and works from there - if I re-home when the printer is hot (and at thermal equilibrium), frame comp basically does nothing. 
 I talked to whoppingpochard about this, he is of the opinion that this is caused by the gantry bowing (imputed deflection, which is higher in the middle of the gantry/bed, where I usually print). I tried to verify this by printing two objects - one in the middle and the second near the endstop corner of the bed.
 
 # First print

@@ -7,7 +7,7 @@ Frame heats up between first and second layer, expands, and Z changes by more th
 
 # A bit of info
 Ever since building my V2 (300 mm spec) I've been fighting an inconsistent Z offset - first print of the day (cold printer start - heat up, soak a bit, QGL, 5x5 bed mesh) has a perfect Z offset. Every other print after that is too high with the same Z offset. Makes sense, the printer expands as it heats up - this is what the frame expansion compensation tries to counteract. However, as I understand it, frame comp works by taking a reference temp at the time of homing and works from there - if I re-home when the printer is hot (and at thermal equilibrium), frame comp basically does nothing. 
-I talked to whoppingpochard about this, he is of the opinion that this is caused by the gantry bowing (imputed deflection, which is higher in the middle of the gantry/bed, where I usually print). I tried to verify this by printing two objects - one in the middle and the second near the endstop corner of the bed.
+I talked to whoppingpochard about this, he is of the opinion that this is caused by the gantry bowing (imputed deflection, which is higher in the middle of the gantry/bed, where I usually print). I tried to verify this by printing two objects - one in the middle and the second near the endstop corner of the bed. Frame comp is on for all tests.
 
 # First print
 Cold start, QGL and bed mesh after a short soak, 2h print

@@ -61,3 +61,21 @@ I can see three options going forward, none of which are ideal:
 1) Disable frame comp, return to the old ways (print single parts or very small plates to heat up the printer, adjust Z offset, print full plates)
 2) Enable frame comp, take a QGL and mesh at a cold state (heated and soaked bed, cold frame) and then NEVER re-home or mesh again until the printer is cold again... And somehow solve the weird overextrusion-like artifacts. Easy.
 3) Regardless of frame comp, just set the z offset for hot operation and let the pritner idle and heat up for hours before actually printing something. Fun.
+
+# Further testing - frame comp off
+Just to make sure my printer is calibrated well, I turned off frame comp and printed the V0 bed mounts again from a cold start.
+
+![20210822_203048](https://user-images.githubusercontent.com/61467766/130511740-0a012731-25d8-4c19-abea-bc882683ef66.jpg)
+![20210822_203121](https://user-images.githubusercontent.com/61467766/130511755-89f01d6b-5826-4f1c-866f-fad9b97729d6.jpg)
+
+Sorry for the potato image quality, it was very late. Left pieces are without frame comp and show zero artifacting... Except that the second layer is too far from the first due to the frame heating up and expanding during the print. So at least that is consistent.
+
+# Further testing - lower expansion coefficient
+After talking a bit with alch3my, I ran the same gcode again, this time with half my calculated frame expansion coeffient, i.e. 0.015 mm/K (from the previous 0.0298). Cold start.
+
+![20210823_211303](https://user-images.githubusercontent.com/61467766/130512194-03eeeae3-058d-4c7b-9e91-f8a74a699a92.jpg)
+![20210823_211258](https://user-images.githubusercontent.com/61467766/130512206-b78d2e47-f9fc-4a3e-aa1f-b785a6d1aeca.jpg)
+![20210823_211230](https://user-images.githubusercontent.com/61467766/130512212-a50ad70e-500e-436e-af18-d6469fa02d2d.jpg)
+![20210823_211202](https://user-images.githubusercontent.com/61467766/130512216-145bf6aa-4ef8-4234-8b7e-99075ffc4145.jpg)
+
+The prints look better as far as number of weird artifacts go, but the first/second layer boundary is not great. This IMO points to the calculated coeffient being correct (and better accounting for the thermal expansion of the frame during the first layers). But the artifacts are still an issue...

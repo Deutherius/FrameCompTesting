@@ -78,4 +78,20 @@ After talking a bit with alch3my, I ran the same gcode again, this time with hal
 ![20210823_211230](https://user-images.githubusercontent.com/61467766/130512212-a50ad70e-500e-436e-af18-d6469fa02d2d.jpg)
 ![20210823_211202](https://user-images.githubusercontent.com/61467766/130512216-145bf6aa-4ef8-4234-8b7e-99075ffc4145.jpg)
 
-The prints look better as far as number of weird artifacts go, but the first/second layer boundary is not great. This IMO points to the calculated coeffient being correct (and better accounting for the thermal expansion of the frame during the first layers). But the artifacts are still an issue...
+The prints look better as far as number of weird artifacts go, but the first/second layer boundary is not great. This IMO points to the calculated coeffient being correct (and better accounting for the thermal expansion of the frame during the first layers). But the artifacts are still an issue..
+
+# Further testing - Chirp... Chirp...
+
+Ever since turning on frame comp, I noticed that my printer was a lot chattier - it would chirp loud and very often. I think I found the cause...
+
+[![Frame comp...?](http://img.youtube.com/vi/pssEiFEH0Fw/0.jpg)](http://www.youtube.com/watch?v=pssEiFEH0Fw "Frame comp...?")
+
+The video was shot near the end of the previous print. The Z constantly moves up and down, about 0.1 mm by my estimation (that large jump at ~5.5 seconds is a 0.4 mm z-hop). It kinda looks like frame comp applies its calculated offset, then the print returns to "normal", rinse and repeat. This could explain some of the artifacts on the previous prints - there are points where one layer looks to be missing (there is an indent that I can force my nail in - likely too high offset from the previous layer), followed by a bulging layer that looks overextruded (layer height returns to what it should have been), namely here
+
+![20210823_211303_marker](https://user-images.githubusercontent.com/61467766/130513145-86f0a2a6-1f5c-4884-96e7-965c2ca4f546.jpg)
+
+and here
+
+![20210823_211202_markers](https://user-images.githubusercontent.com/61467766/130513158-9016882c-882f-47c0-b616-e94e554f8a81.jpg)
+
+This is speculation of course, but there is no doubt something is seriously wrong with at least my setup, and potentially frame comp as a whole. More testing will follow soon...

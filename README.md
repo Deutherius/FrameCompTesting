@@ -112,5 +112,7 @@ This indicates to me that as the value of z comp gets further from 0, things get
 Bonus picture - this is what happens when you "cool your frame" too quickly:
 ![20210824_200734](https://user-images.githubusercontent.com/61467766/130668068-1436aa03-c8e6-497e-83dd-569352a72db8.jpg)
 
+# Chirp - longer smoothing time
 
+Alch3my suggested a longer than default smoothing time for frame comp, so I put in 10 seconds. Thermistor out, start the print, wait for a few layers (I like my PEI), thermistor back in. Instant chirping. Disable frame comp, chirping is gone.
 

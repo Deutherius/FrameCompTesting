@@ -109,7 +109,7 @@ So I started the same print, this time from a warm frame state (reference frame 
 
 This indicates to me that as the value of z comp gets further from 0, things get unstable.
 
-Bonus picture - this is what happens when you "cool" your frame thermistor too quickly:
+Bonus picture - this is what happens when you "cool your frame" too quickly:
 ![20210824_200734](https://user-images.githubusercontent.com/61467766/130668068-1436aa03-c8e6-497e-83dd-569352a72db8.jpg)
 
 

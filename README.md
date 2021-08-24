@@ -120,3 +120,10 @@ Alch3my suggested a longer than default smoothing time for frame comp, so I put 
 
 No difference. Bed mesh ain't it chief.
 
+# Chirp testing - fresh klipper + frame comp install
+
+[![Fresh klipper+frame comp install, frame comp on](http://img.youtube.com/vi/vhluh9-LW8Q/0.jpg)](http://www.youtube.com/watch?v=vhluh9-LW8Q "Fresh klipper+frame comp install, frame comp on")
+
+[![Fresh klipper+frame comp install, frame comp off](http://img.youtube.com/vi/S9NDAJhQ_qw/0.jpg)](http://www.youtube.com/watch?v=S9NDAJhQ_qw "Fresh klipper+frame comp install, frame comp off")
+
+That about concludes my testing of frame comp for now, I'm out of ideas. If you are not, feel free to contact me on discord at Deutherius#3295.

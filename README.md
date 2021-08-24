@@ -1,5 +1,5 @@
 # Prolog
-This mess of a page started as a way to gather my thoughts, experiments and results that aim to solve 2 problems - inconsistent second layer during longer prints, and inconsistent Z offset for subsequent print jobs after the first print of the day. It evolved into an experimental debugging of the Frame Compensation branch of Klipper.
+This mess of a page started as a way to gather my thoughts, experiments and results that aim to solve 2 problems - inconsistent second layer during longer prints, and inconsistent Z offset for subsequent print jobs after the first print of the day. First issue is caused by the frame expanding in the Z direction, and is covered by the Frame Expansion Compensation fork of Klipper. The second issue is caused by the gantry bowing as it heats up, which is corrected by a bed mesh, but under wrong assumptions about what is actually Z=0.
 
 # Why do I even want to have frame expansion compensation on?
 Quite simple - this is the same part, printed with the same settings. Both of these were printed from a cold start. The only difference is that while the right one was a solo part with a first layer time of ~1m45s, the left one was a part of a 7 hour full(ish) plate with a first layer time of more than 22 minutes.

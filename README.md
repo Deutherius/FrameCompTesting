@@ -96,7 +96,7 @@ and here
 
 This is speculation of course, but there is no doubt something is seriously wrong with at least my setup, and potentially frame comp as a whole. More testing will follow soon...
 
-# Chirp continued
+# Chirp testing - data logging and new testing method (no need to wait for frame to cool down)
 
 Talked a bit with Alch3my, he wrote a script that logs data during a print. Started from a cold frame, chirp was back even at 1.8 mm of Z height (same V0 bed mounts, 0.015 mm/K). I stopped the print and data collection, which showed nothing out of the ordinary (frame comp stable, frame temps stable) - something must be broken under the hood. 
 
@@ -112,7 +112,9 @@ This indicates to me that as the value of z comp gets further from 0, things get
 Bonus picture - this is what happens when you "cool your frame" too quickly:
 ![20210824_200734](https://user-images.githubusercontent.com/61467766/130668068-1436aa03-c8e6-497e-83dd-569352a72db8.jpg)
 
-# Chirp - longer smoothing time
+# Chirp testing - longer smoothing time
 
 Alch3my suggested a longer than default smoothing time for frame comp, so I put in 10 seconds. Thermistor out, start the print, wait for a few layers (I like my PEI), thermistor back in. Instant chirping. Disable frame comp, chirping is gone.
+
+
 

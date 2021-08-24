@@ -116,5 +116,7 @@ Bonus picture - this is what happens when you "cool your frame" too quickly:
 
 Alch3my suggested a longer than default smoothing time for frame comp, so I put in 10 seconds. Thermistor out, start the print, wait for a few layers (I like my PEI), thermistor back in. Instant chirping. Disable frame comp, chirping is gone.
 
+# Chirp testing - no bed mesh
 
+No difference. Bed mesh ain't it chief.
 

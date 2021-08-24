@@ -95,3 +95,22 @@ and here
 ![20210823_211202_markers](https://user-images.githubusercontent.com/61467766/130513158-9016882c-882f-47c0-b616-e94e554f8a81.jpg)
 
 This is speculation of course, but there is no doubt something is seriously wrong with at least my setup, and potentially frame comp as a whole. More testing will follow soon...
+
+# Chirp continued
+
+Talked a bit with Alch3my, he wrote a script that logs data during a print. Started from a cold frame, chirp was back even at 1.8 mm of Z height (same V0 bed mounts, 0.015 mm/K). I stopped the print and data collection, which showed nothing out of the ordinary (frame comp stable, frame temps stable) - something must be broken under the hood. 
+
+![z_comp](https://user-images.githubusercontent.com/61467766/130668454-49407bbe-6a1e-4cc4-b393-7d14d8cd825f.png)
+![temp](https://user-images.githubusercontent.com/61467766/130668456-44ff4234-1ff2-4dad-a01d-939916736c3e.png)
+
+Alch3my suggested I try running a print and disable frame comp when chirping starts (probably should have tried that sooner, duh).
+
+So I started the same print, this time from a warm frame state (reference frame temp 33.06 °C). Zero chirping at the same Z height as before (frame temp at some 34 °C, frame comp of -0.0120 mm). So I pulled the thermistor out and tried heating it up with my breath - no dice, wouldn't go above 34.5 °C and no chirping happened (probably not a bad ideato try a different thermistor as well). So I went the otehr direction and let the thermistor hang in the outside air, which quickly cooled it to 25.57 °C (frame comp of positive 0.1091 mm) - and chirping was quickly back. I then disabled frame comp (SET_FRAME_COMP enable=0), chirping went away and print progressed smoothly. Turn frame comp on, chirps are back. Shove thermistor back in the frame, chirps gone.
+
+This indicates to me that as the value of z comp gets further from 0, things get unstable.
+
+Bonus picture - this is what happens when you "cool" your frame thermistor too quickly:
+![20210824_200734](https://user-images.githubusercontent.com/61467766/130668068-1436aa03-c8e6-497e-83dd-569352a72db8.jpg)
+
+
+

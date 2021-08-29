@@ -1,4 +1,4 @@
-#UPDATE
+# UPDATE
 
 The frame comp Z jumping was a bug in frame comp. Alch3my found it and fixed it. I haven't had the time to try it out yet, but it should be fine now.
 The gantry bowing issue can be fixed with extrusion backers. Alternatively, I wrote a simple compensation for it using gcode_macros. You can find it ![here](https://github.com/Deutherius/DFC-GBC).

@@ -1,7 +1,7 @@
 # UPDATE
 
 The frame comp Z jumping was a bug in frame comp. Alch3my found it and fixed it. I haven't had the time to try it out yet, but it should be fine now.
-The gantry bowing issue can be fixed with extrusion backers. Alternatively, I wrote a simple compensation for it using gcode_macros. You can find it [here](https://github.com/Deutherius/DFC-GBC).
+The gantry bowing issue can be fixed with extrusion backers.
 
 # Prolog
 This mess of a page started as a way to gather my thoughts, experiments and results that aim to solve 2 problems - inconsistent second layer during longer prints, and inconsistent Z offset for subsequent print jobs after the first print of the day. First issue is caused by the frame expanding in the Z direction, and is covered by the Frame Expansion Compensation fork of Klipper. The second issue is caused by the gantry bowing as it heats up, which is corrected by a bed mesh, but under wrong assumptions about what is actually Z=0.
@@ -135,3 +135,5 @@ No difference. Bed mesh ain't it chief.
 [![Fresh klipper+frame comp install, frame comp off](http://img.youtube.com/vi/S9NDAJhQ_qw/0.jpg)](http://www.youtube.com/watch?v=S9NDAJhQ_qw "Fresh klipper+frame comp install, frame comp off")
 
 That about concludes my testing of frame comp for now, I'm out of ideas. If you are not, feel free to contact me on discord at Deutherius#3295.
+
+(solved, read update at the top)
